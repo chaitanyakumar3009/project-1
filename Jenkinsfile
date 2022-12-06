@@ -1,36 +1,20 @@
 pipeline{
-    
-    agent any 
-    
-    stages {
-        
-        stage('Git Checkout'){
-            
-            steps{
-                
-                script{
-                    
+
+    agent any
+
+       stages{
+            stage('git checkout'){
+               steps{
                     git branch: 'main', url: 'https://github.com/chaitanyakumar3009/project-1.git'
-                }
+               }
+
             }
-        }
-
-        
-    }
-     stages {
-
-        stage('Unit Test'){
-
-            steps{
-
-                script{
-
-                    sh 'mvn test'
-                }
+            stage('unit test'){
+               steps{
+                  sh 'mvn test'
+               }
             }
-        }
-
-
-    }
+       }
 
 }
+
