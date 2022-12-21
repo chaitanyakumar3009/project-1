@@ -54,9 +54,9 @@ pipeline{
        stage('Docker-image-Build'){
           steps{
              script{
-                sh 'docker image build -t $JOB_NAME:v1.$BUILD-ID . '
-                sh 'docker image tag $JOB_NAME:v1.$BUILD-ID chaitanya1997/$JOB_NAME:v1.$BUILD-ID'
-                sh 'docker image tag $JOB_NAME:v1.$BUILD-ID chaitanya1997/$JOB_NAME:latest'
+                sh 'sudo docker image build -t $JOB_NAME:v1.$BUILD-ID . '
+                sh 'sudo docker image tag $JOB_NAME:v1.$BUILD-ID chaitanya1997/$JOB_NAME:v1.$BUILD-ID'
+                sh 'sudo docker image tag $JOB_NAME:v1.$BUILD-ID chaitanya1997/$JOB_NAME:latest'
              }
           }
        }
