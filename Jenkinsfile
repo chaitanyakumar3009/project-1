@@ -54,7 +54,7 @@ pipeline{
        stage('Docker image'){
            steps{
 
-                sh 'docker ps'
+                sh 'sudo docker ps'
 
            }
        }
