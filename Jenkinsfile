@@ -55,7 +55,7 @@ pipeline{
            steps{
               script{
 
-                sh 'sudo docker ps'
+                sh 'docker ps'
               }
 
            }
