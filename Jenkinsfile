@@ -53,8 +53,10 @@ pipeline{
        }
        stage('Docker image'){
            steps{
+              script{
 
                 sh 'sudo docker ps'
+              }
 
            }
        }
