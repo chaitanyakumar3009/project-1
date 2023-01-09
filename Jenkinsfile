@@ -54,7 +54,7 @@ pipeline{
        stage('Docker image'){
            steps{
 
-                sh 'docker image build -tag $JOB_NAME:v1.$BUILD_ID .'
+                sh 'docker ps'
 
            }
        }
